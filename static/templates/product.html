@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class= 'table'>
+	<thead><th><h1>{{ query }}</h1></th></thead>
+	<tr>
+
+		<td>{% if query.image1 %}
+			<img src='/media/{{ query.image1 }}' style='max-width:350px;float:left; margin-right:20px'>
+			{% endif %}{{ query.description }} $ {{ query.price }} with a sku of {{ query.sku }} and {{ query.inventory }} in stock<br />
+			<a href='add' class='btn btn-primary' style='margin-top:20px;'>Add To Cart</a>
+		</td>
+	</tr>
+	
+
+</table>
+
+{% endblock %}

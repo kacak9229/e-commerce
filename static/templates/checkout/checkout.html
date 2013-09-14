@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+Cart total price: ${{ cart.total }}
+
+<form action="" method="POST">
+  <script
+    src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+    data-key="pk_test_AdGaWGZMGREkdovLS4TYsOVk"
+    data-amount="{{ trans_total }}"
+    data-name="Demo Site"
+    data-description="2 items: ${{ cart.total }}"
+    data-image="/128x128.png">
+  </script>
+</form>
+
+
+{% endblock %}
